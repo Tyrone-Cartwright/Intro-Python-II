@@ -87,16 +87,16 @@ while True:
         player.current_room = try_direction(user_input, player.current_room)
 
     elif len(user_input) == 2:
-        words = user_input[0]
+        action = user_input[0]
         item = user_input[1]
 
-        if words == "take":
+        if action == "take":
             if item in player.current_room.items:
                 player.current_room.items.remove(item)
                 player.inventory.append(item)
                 print(f"{item.name} was added to your inventory")
 
-            elif words == "drop":
+            elif action == "drop":
                 if item in player.inventory:
                     player.inventory.remove(item)
                     player.inventory.append(item)
