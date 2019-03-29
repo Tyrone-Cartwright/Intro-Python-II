@@ -99,7 +99,7 @@ while True:
             elif action == "drop":
                 if item in player.inventory:
                     player.inventory.remove(item)
-                    player.current_room.items.append(item)
+                    player.current_room.append(item)
                     print(f"{item.name} was dropped from your inventory")
 
     else:
